@@ -1,0 +1,28 @@
+<div id="weatherMain">
+    <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>
+    </div>
+    <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-moon mun"></i>
+    </div>
+    <div class="weatherWidgetRow clouddiv">
+        <i class="fas fa-3x fa-cloud cloud"></i>
+    </div>
+
+    <div class="weatherWidgetRow">
+        <h1>{{WeatherData.temp_celcius}}°C</h1>
+    </div>
+    <br>
+    <div class="weatherWidgetRow ">{{WeatherData.temp_max}}°/{{WeatherData.temp_min}}°C</div>
+    <br>
+    <div class="weatherWidgetRow ">Feels like :{{WeatherData.temp_feels_like}}°C</div>
+    <br>
+    <div class="weatherWidgetRow ">{{WeatherData.name}}</div>
+    <br>
+      <div class="weatherWidgetRow ">Humidity {{WeatherData.main.humidity}}%</div>
+    <br>
+    <div *ngIf="WeatherData.isDay ">
+        <div class="weatherWidgetRow ">Sunset Time {{WeatherData.sunset_time}}</div>
+    </div>
+
+</div>
